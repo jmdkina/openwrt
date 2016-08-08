@@ -21,6 +21,8 @@ include $(INCLUDE_DIR)/cmake.mk
 
 TARGET_LDFLAGS += $(if $(CONFIG_USE_GLIBC),-lrt)
 
+TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include
+
 define Package/ubox
   SECTION:=base
   CATEGORY:=Base system

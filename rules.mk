@@ -14,6 +14,8 @@ endif
 include $(TOPDIR)/include/debug.mk
 include $(TOPDIR)/include/verbose.mk
 
+EXTERNDIR:=/opt/data/openwrt
+
 export TMP_DIR:=$(TOPDIR)/tmp
 
 qstrip=$(strip $(subst ",,$(1)))
@@ -79,7 +81,8 @@ DL_DIR:=$(if $(call qstrip,$(CONFIG_DOWNLOAD_FOLDER)),$(call qstrip,$(CONFIG_DOW
 BIN_DIR:=$(if $(call qstrip,$(CONFIG_BINARY_FOLDER)),$(call qstrip,$(CONFIG_BINARY_FOLDER)),$(TOPDIR)/bin/$(BOARD))
 INCLUDE_DIR:=$(TOPDIR)/include
 SCRIPT_DIR:=$(TOPDIR)/scripts
-BUILD_DIR_BASE:=$(TOPDIR)/build_dir
+#BUILD_DIR_BASE:=$(TOPDIR)/build_dir
+BUILD_DIR_BASE:=$(EXTERNDIR)/build_dir
 BUILD_DIR_HOST:=$(BUILD_DIR_BASE)/host
 STAGING_DIR_HOST:=$(TOPDIR)/staging_dir/host
 ifeq ($(CONFIG_EXTERNAL_TOOLCHAIN),)

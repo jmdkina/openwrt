@@ -10,6 +10,8 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=wrapper
 PKG_VERSION:=1
 
+CONFIG_TOOLCHAIN_ROOT:=/
+
 include $(INCLUDE_DIR)/toolchain-build.mk
 
 

@@ -1,0 +1,10 @@
+
+package/libs/libubox/Makefile -- use old version
+package/system/ubox/Makefile -- add include directory for compile, depends onl libubox avl.h
+package/system/ubus/Makefile -- remove depends of libblogmsg-json, and use old version
+rules.mk -- change build_dir position to /opt/data
+toolchain/wrapper/Makefile -- set config CONFIG_TOOLCHAIN_ROOT to '/'
+
+target/Makefile -- set not compile kernel and generate images
+
+package/utils/lua/patches/400-compile-with-host.patch -- Compile failed of lua, should put *.o,*.c before -l option

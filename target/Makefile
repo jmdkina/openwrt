@@ -12,10 +12,10 @@ $(curdir)/builddirs-install:=linux $(if $(CONFIG_SDK),sdk) $(if $(CONFIG_IB),ima
 
 $(curdir)/imagebuilder/install:=$(curdir)/linux/install
 
-$(eval $(call stampfile,$(curdir),target,prereq,.config))
-$(eval $(call stampfile,$(curdir),target,compile,$(TMP_DIR)/.build))
-$(eval $(call stampfile,$(curdir),target,install,$(TMP_DIR)/.build))
-
-$($(curdir)/stamp-install): $($(curdir)/stamp-compile) 
-
-$(eval $(call subdir,$(curdir)))
+#$(eval $(call stampfile,$(curdir),target,prereq,.config))
+#$(eval $(call stampfile,$(curdir),target,compile,$(TMP_DIR)/.build))
+#$(eval $(call stampfile,$(curdir),target,install,$(TMP_DIR)/.build))
+#
+#$($(curdir)/stamp-install): $($(curdir)/stamp-compile) 
+#
+#$(eval $(call subdir,$(curdir)))
